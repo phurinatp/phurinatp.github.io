@@ -35,5 +35,14 @@
     </div>
 
     <p class="bottom-text">at the bottom</p>
+
+    <script>
+        window.addEventListener('beforeunload', function() {
+            console.log('exit')
+          window.dataLayer.push({
+            event: 'beforeunload'
+          });
+        });
+    </script>
 </body>
 </html>

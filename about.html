@@ -33,5 +33,13 @@
     <div class="tall-box-about">
     </div>
 
+    <script>
+        window.addEventListener('beforeunload', function() {
+            console.log('exit')
+          window.dataLayer.push({
+            event: 'beforeunload'
+          });
+        });
+    </script>
 </body>
 </html>
