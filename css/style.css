@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+}
+
+.tall-box-about {
+    height: 2000px;
+    background-color: lightcoral;
+}
+
+.tall-box {
+    height: 2000px;
+    background-color: lightblue;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: darkblue;
+}
+
+a:hover {
+    color: darkcyan;
+}
