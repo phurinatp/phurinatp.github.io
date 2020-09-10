@@ -27,3 +27,8 @@ a {
 a:hover {
     color: darkcyan;
 }
+
+.active {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
