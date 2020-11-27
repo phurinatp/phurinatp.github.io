@@ -42,7 +42,7 @@ function updateInstruction() {
         case 1:
             stepInstruction.innerHTML = `
                 Bring mobile window to the top.
-                <p class="library">( Use node-window-manger.js )</p>
+                <p class="library">( Use node-window-manager )</p>
             `;
             if (isAnimateBorderActive(mobileDevices[0])) {
                 mobileDevices[0].classList.toggle("animate-border");
