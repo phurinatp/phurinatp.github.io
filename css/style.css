@@ -5,6 +5,28 @@ body {
     user-select: none;
 }
 
+.menubar {
+    background-color: #222222;
+    padding: 30px;
+    color: #ddd;
+    display: inline-block;
+}
+
+.menubar a {
+    color: #ddd;
+    display: block;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.menubar a:hover {
+    color: #f9ca24
+}
+
+.active {
+    color: #f9ca24 !important;
+}
+
 .container {
     position: relative;
     text-align: center;

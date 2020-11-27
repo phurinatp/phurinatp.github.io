@@ -11,6 +11,8 @@ let mobileText = document.getElementById('mobile-text');
 let app = document.getElementById('app');
 let folders = document.getElementsByClassName('folder');
 let mouseCursor = document.getElementsByClassName('mouse-cursor');
+let content = document.getElementsByClassName('content');
+let currentContent = 0;
 let step = 0;
 
 nextBtn.addEventListener('click', () => {
@@ -143,4 +145,16 @@ function isAnimateBorderActive(element) {
         return true;
     }
     return false;
+}
+
+let prevContent = 0;
+for (let i = 0; i < content.length; i++) {
+    content[i].addEventListener('click', () => {
+        if (prevContent !== i) {
+            content[prevContent].classList.toggle("active");
+            content[i].classList.toggle("active");
+            prevContent = i;
+            currentContent = i;
+        }
+    });
 }
