@@ -12,6 +12,8 @@ let app = document.getElementById('app');
 let folders = document.getElementsByClassName('folder');
 let mouseCursor = document.getElementsByClassName('mouse-cursor');
 let content = document.getElementsByClassName('content');
+let contentOne = document.getElementById('content-1');
+let contentTwo = document.getElementById('content-2');
 let currentContent = 0;
 let step = 0;
 
@@ -153,6 +155,13 @@ for (let i = 0; i < content.length; i++) {
         if (prevContent !== i) {
             content[prevContent].classList.toggle("active");
             content[i].classList.toggle("active");
+            if (i === 0) {
+                contentOne.style.display = 'block';
+                contentTwo.style.display = 'none';
+            } else if (i === 1) {
+                contentOne.style.display = 'none';
+                contentTwo.style.display = 'block';
+            }
             prevContent = i;
             currentContent = i;
         }

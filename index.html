@@ -21,57 +21,61 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDH8C62" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-            <div class="menubar">
-                <h1>Content</h1>
-                <a class="content active">- Algorithm to click the icon on a mobile</a>
-                <a class="content">- Algorithm to read the text on a mobile</a>
-            </div>
+    <div class="menubar">
+        <h1>Content</h1>
+        <a class="content active">- Algorithm to click the icon on a mobile</a>
+        <a class="content">- Algorithm to read the text on a mobile</a>
+    </div>
     <div class="container">
-        <h2>Algorithm to click the icon on a mobile</h2>
-        <div class="folder">
-            <img src="./assets/images/folder.png" width="30px">
-            <span>assets</span>
-            <p>- icon.png</p>
-        </div>
-        <div class="desktop-screen">
-            <div class="mouse-cursor">
-                <img src="./assets/images/cursor.png" alt="">
+        <div id="content-1">
+            <h2>Algorithm to click the icon on a mobile</h2>
+            <div class="folder">
+                <img src="./assets/images/folder.png" width="30px">
+                <span>assets</span>
+                <p>- icon.png</p>
             </div>
-            <div class="mobile-device">
-                <div id="mobile-step-2">
-                    <p class="mobile-xy">(x, y)</p>
-                    <p class="mobile-h">height</p>
-                    <p class="mobile-w">width</p>
+            <div class="desktop-screen">
+                <div class="mouse-cursor">
+                    <img src="./assets/images/cursor.png" alt="">
                 </div>
-                <div id="mobile-step-3">
-                    <img src="./assets/images/dot.png" alt="">
-                </div>
-                <div class="application-container">
-                    <div class="app" id="app">
-                        <div id="mobile-step-4">
-                            <p class="app-xy">(x, y)</p>
-                            <p class="app-h">h</p>
-                            <p class="app-w">w</p>
-                        </div>
+                <div class="mobile-device">
+                    <div id="mobile-step-2">
+                        <p class="mobile-xy">(x, y)</p>
+                        <p class="mobile-h">height</p>
+                        <p class="mobile-w">width</p>
                     </div>
-                    <div class="app"></div>
-                    <div class="app"></div>
+                    <div id="mobile-step-3">
+                        <img src="./assets/images/dot.png" alt="">
+                    </div>
+                    <div class="application-container">
+                        <div class="app" id="app">
+                            <div id="mobile-step-4">
+                                <p class="app-xy">(x, y)</p>
+                                <p class="app-h">h</p>
+                                <p class="app-w">w</p>
+                            </div>
+                        </div>
+                        <div class="app"></div>
+                        <div class="app"></div>
+                    </div>
+                    <h5 id="mobile-text">mobile</h5>
                 </div>
-                <h5 id="mobile-text">mobile</h5>
+                <div class="another-program">
+                    <h5>another program</h5>
+                </div>
+                <div class="desktop-taskbar"></div>
             </div>
-            <div class="another-program">
-                <h5>another program</h5>
+
+            <div class="instruction">
+                <h3 id="step"></h3>
+                <h5 id="step-instruction"></h5>
             </div>
-            <div class="desktop-taskbar"></div>
+
+            <button id="prevBtn">Prev</button>
+            <button id="nextBtn">Next</button>
         </div>
 
-        <div class="instruction">
-            <h3 id="step"></h3>
-            <h5 id="step-instruction"></h5>
-        </div>
-
-        <button id="prevBtn">Prev</button>
-        <button id="nextBtn">Next</button>
+        <div id="content-2">...</div>
     </div>
 
     <script src="./js/script.js"></script>
