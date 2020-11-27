@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test GTM page</title>
+    <title>Mobile Banking Algorithms</title>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TDH8C62');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TDH8C62');</script>
     <link rel="stylesheet" href="./css/style.css">
     <!-- End Google Tag Manager -->
 </head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDH8C62"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <h1>Welcome to the first page</h1>
-    <a href="./index.html" class="active">Home</a>
-    <a href="./contact.html">Contact</a>
-    <a href="./about.html">About</a>
-    <a href="https://www.google.com">Google</a>
-    <p class="top-text">at the top</p>
-    <h5>Hell world</h5>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDH8C62" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="container">
+        <h2>Algorithm to click the icon on a mobile</h2>
+        <div class="folder">
+            <img src="./assets/images/folder.png" width="30px">
+            <span>assets</span>
+            <p>- icon.png</p>
+        </div>
+        <div class="desktop-screen">
+            <div class="mouse-cursor">
+                <img src="./assets/images/cursor.png" alt="">
+            </div>
+            <div class="mobile-device">
+                <div id="mobile-step-2">
+                    <p class="mobile-xy">(x, y)</p>
+                    <p class="mobile-h">height</p>
+                    <p class="mobile-w">width</p>
+                </div>
+                <div id="mobile-step-3">
+                    <img src="./assets/images/dot.png" alt="">
+                </div>
+                <div class="application-container">
+                    <div class="app" id="app">
+                        <div id="mobile-step-4">
+                            <p class="app-xy">(x, y)</p>
+                            <p class="app-h">h</p>
+                            <p class="app-w">w</p>
+                        </div>
+                    </div>
+                    <div class="app"></div>
+                    <div class="app"></div>
+                </div>
+                <h5 id="mobile-text">mobile</h5>
+            </div>
+            <div class="another-program">
+                <h5>another program</h5>
+            </div>
+            <div class="desktop-taskbar"></div>
+        </div>
 
-    <button id="test-button">Test button</button>
+        <div class="instruction">
+            <h3 id="step"></h3>
+            <h5 id="step-instruction"></h5>
+        </div>
 
-    <div class="tall-box">
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn">Next</button>
     </div>
 
-    <p class="bottom-text">at the bottom</p>
-
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
