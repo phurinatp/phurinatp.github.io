@@ -196,6 +196,9 @@ function hideAllCodeBlock () {
 }
 
 function displayCodeBlock (stepNumber) {
+    if (stepNumber === 0) {
+        return;
+    }
     for (let i = 0; i < 6; i++) {
         if (i + 1 !== stepNumber) {
             content1CodeSteps[i].style.display = 'none';
