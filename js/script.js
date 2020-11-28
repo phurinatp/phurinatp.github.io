@@ -30,7 +30,7 @@ let content1CodeSteps = [
     content1CodeStep6,
 ];
 
-let currentContent = 0;
+let currentContent = 2;
 let step = 0;
 
 hideAllCodeBlock();
@@ -170,17 +170,25 @@ function isAnimateBorderActive(element) {
     return false;
 }
 
-let prevContent = 0;
+let prevContent = 2;
 for (let i = 0; i < content.length; i++) {
     content[i].addEventListener('click', () => {
         if (prevContent !== i) {
             content[prevContent].classList.toggle("active");
             content[i].classList.toggle("active");
             if (i === 0) {
+                hideAllCodeBlock();
+                contentOne.style.display = 'none';
+                contentTwo.style.display = 'block';
+            } else if (i === 1) {
+                hideAllCodeBlock();
+                contentOne.style.display = 'none';
+                contentTwo.style.display = 'block';
+            } else if (i === 2) {
                 displayCodeBlock(step);
                 contentOne.style.display = 'block';
                 contentTwo.style.display = 'none';
-            } else if (i === 1) {
+            } else if (i === 3) {
                 hideAllCodeBlock();
                 contentOne.style.display = 'none';
                 contentTwo.style.display = 'block';
