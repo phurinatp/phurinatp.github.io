@@ -33,7 +33,7 @@ let content1CodeSteps = [
 let currentContent = 0;
 let step = 0;
 
-initializeCodeBlock();
+hideAllCodeBlock();
 
 nextBtn.addEventListener('click', () => {
     step++;
@@ -55,7 +55,7 @@ prevBtn.addEventListener('click', () => {
         updateInstruction();
     } else {
         step = 0;
-        initializeCodeBlock();
+        hideAllCodeBlock();
         stepTopic.innerHTML = '';
         stepInstruction.innerHTML = '';
         anotherPrograms[0].style.zIndex = '1000'
@@ -177,9 +177,11 @@ for (let i = 0; i < content.length; i++) {
             content[prevContent].classList.toggle("active");
             content[i].classList.toggle("active");
             if (i === 0) {
+                displayCodeBlock(step);
                 contentOne.style.display = 'block';
                 contentTwo.style.display = 'none';
             } else if (i === 1) {
+                hideAllCodeBlock();
                 contentOne.style.display = 'none';
                 contentTwo.style.display = 'block';
             }
@@ -189,7 +191,7 @@ for (let i = 0; i < content.length; i++) {
     });
 }
 
-function initializeCodeBlock () {
+function hideAllCodeBlock () {
     content1CodeSteps.forEach(item => item.style.display = 'none');
 }
 
