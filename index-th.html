@@ -14,10 +14,17 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-TDH8C62');</script>
+    <!-- End Google Tag Manager -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <!-- End Google Tag Manager -->
+
+    <style>
+        * {
+            font-family: 'Prompt', sans-serif !important;
+            font-weight: lighter;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,23 +36,23 @@
         <div class="lang-div">
             <label for="language">Language: </label>
             <select name="language" id="language">
-                <option value="eng">English</option>
                 <option value="thai">Thai</option>
+                <option value="eng">English</option>
             </select>
         </div>
     </header>
     <div class="menubar">
-        <h3>Content</h3>
-        <h5>Introduction</h5>
-        <a class="content">- What is a mobile control</a>
-        <a class="content">- How to setup</a>
-        <h5>How to Control a Mobile</h5>
-        <a class="content active">- Algorithm to click the icon on a mobile</a>
-        <a class="content">- Algorithm to read the text on a mobile</a>
+        <h3>สารบัญ</h3>
+        <h5>เกริ่นนำ</h5>
+        <a class="content">- การควบคุมมือถือคืออะไร</a>
+        <a class="content">- ขั้นตอนการติดตั้ง</a>
+        <h5>การควบคุมมือถือ</h5>
+        <a class="content active">- ขั้นตอนการคลิกไอคอนบนมือถือ</a>
+        <a class="content">- ขั้นตอนการอ่านข้อความบนมือถือ</a>
     </div>
     <div class="container">
         <div id="content-1">
-            <h2>Algorithm to click the icon on a mobile</h2>
+            <h2>ขั้นตอนการคลิกไอคอนบนมือถือ</h2>
             <div class="desktop-screen">
                 <div class="mouse-cursor">
                     <img src="./assets/images/cursor.png" alt="">
@@ -70,10 +77,10 @@
                         <div class="app"></div>
                         <div class="app"></div>
                     </div>
-                    <h5 id="mobile-text">mobile</h5>
+                    <h5 id="mobile-text">มือถือ</h5>
                 </div>
                 <div class="another-program">
-                    <h5>another program</h5>
+                    <h5>โปรแกรมอื่น</h5>
                 </div>
                 <div class="desktop-taskbar"></div>
             </div>
@@ -88,8 +95,8 @@
                 <h5 id="step-instruction"></h5>
             </div>
 
-            <button id="prevBtn">Prev</button>
-            <button id="nextBtn">Next</button>
+            <button id="prevBtn">ก่อนหน้า</button>
+            <button id="nextBtn">ต่อไป</button>
         </div>
 
         <div id="content-2"></div>

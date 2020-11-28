@@ -14,6 +14,7 @@ let mouseCursor = document.getElementsByClassName('mouse-cursor');
 let content = document.getElementsByClassName('content');
 let contentOne = document.getElementById('content-1');
 let contentTwo = document.getElementById('content-2');
+let languageSelect = document.getElementById('language');
 
 let content1CodeStep1 = document.getElementById('content-1-code-step-1');
 let content1CodeStep2 = document.getElementById('content-1-code-step-2');
@@ -32,6 +33,13 @@ let content1CodeSteps = [
 
 let currentContent = 2;
 let step = 0;
+
+let lang = 'eng';
+if (window.location.pathname.indexOf('index-th') > -1) {
+    lang = 'thai';
+} else {
+    lang = 'eng';
+}
 
 hideAllCodeBlock();
 
@@ -65,10 +73,17 @@ prevBtn.addEventListener('click', () => {
 function updateInstruction() {
     switch (step) {
         case 1:
-            stepInstruction.innerHTML = `
-                Bring mobile window to the top.
-                <p class="library">( Use node-window-manager )</p>
-            `;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                    Bring mobile window to the top.
+                    <p class="library">( Use node-window-manager )</p>
+                `;
+            } else {
+                stepInstruction.innerHTML = `
+                    ย้ายตัวโปรแกรมมือถือมาไว้หน้าสุด.
+                    <p class="library">( ใช้ node-window-manager )</p>
+                `;
+            }
             if (isAnimateBorderActive(mobileDevices[0])) {
                 mobileDevices[0].classList.toggle("animate-border");
             }
@@ -214,3 +229,14 @@ function displayCodeBlock (stepNumber) {
     }
     content1CodeSteps[stepNumber - 1].style.display = 'block';
 }
+
+languageSelect.addEventListener('change', (e) => {
+    console.log('You selected: ', e.target.value);
+    let l = e.target.value;
+    
+    if (l === 'eng') {
+        window.location.href = './index.html';
+    } else if (l === 'thai') {
+        window.location.href = './index-th.html';
+    }
+});
