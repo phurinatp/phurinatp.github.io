@@ -14,13 +14,32 @@ let mouseCursor = document.getElementsByClassName('mouse-cursor');
 let content = document.getElementsByClassName('content');
 let contentOne = document.getElementById('content-1');
 let contentTwo = document.getElementById('content-2');
+
+let content1CodeStep1 = document.getElementById('content-1-code-step-1');
+let content1CodeStep2 = document.getElementById('content-1-code-step-2');
+let content1CodeStep3 = document.getElementById('content-1-code-step-3');
+let content1CodeStep4 = document.getElementById('content-1-code-step-4');
+let content1CodeStep5 = document.getElementById('content-1-code-step-5');
+let content1CodeStep6 = document.getElementById('content-1-code-step-6');
+let content1CodeSteps = [
+    content1CodeStep1,
+    content1CodeStep2,
+    content1CodeStep3,
+    content1CodeStep4,
+    content1CodeStep5,
+    content1CodeStep6,
+];
+
 let currentContent = 0;
 let step = 0;
+
+initializeCodeBlock();
 
 nextBtn.addEventListener('click', () => {
     step++;
     if (step > 0 && step <= 6) {
         stepTopic.innerHTML = 'Step ' + step;
+        displayCodeBlock(step);
         updateInstruction();
     } else if (step > 6) {
         step = 6;
@@ -32,9 +51,11 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
     if (--step > 0) {
         stepTopic.innerHTML = 'Step ' + step;
+        displayCodeBlock(step);
         updateInstruction();
     } else {
         step = 0;
+        initializeCodeBlock();
         stepTopic.innerHTML = '';
         stepInstruction.innerHTML = '';
         anotherPrograms[0].style.zIndex = '1000'
@@ -74,7 +95,7 @@ function updateInstruction() {
         case 3:
             stepInstruction.innerHTML = `
                 Capture the mobile screen and save it. For example <span style="color: lightcoral;">capture.png</span>
-                <p class="library">( Use Robot.js )</p>
+                <p class="library">( Use Robot.js and Jimp )</p>
             `;
             if (isAnimateBorderActive(mobileDevices[0])) {
                 mobileDevices[0].classList.toggle("animate-border");
@@ -166,4 +187,17 @@ for (let i = 0; i < content.length; i++) {
             currentContent = i;
         }
     });
+}
+
+function initializeCodeBlock () {
+    content1CodeSteps.forEach(item => item.style.display = 'none');
+}
+
+function displayCodeBlock (stepNumber) {
+    for (let i = 0; i < 6; i++) {
+        if (i + 1 !== stepNumber) {
+            content1CodeSteps[i].style.display = 'none';
+        }
+    }
+    content1CodeSteps[stepNumber - 1].style.display = 'block';
 }

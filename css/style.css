@@ -8,6 +8,50 @@ body {
     min-width: 1000px;
 }
 
+.code-container {
+    /* display: flex; */
+    display: inline-block;
+    margin-top: 150px;
+    /* float: right; */
+}
+
+.code-container h4 {
+    color: rgb(218, 218, 218);
+    font-weight: lighter;
+}
+
+pre {
+    text-align: left;
+    background-color: #2F2958;
+    padding: 10px;
+    color: rgb(224, 195, 26);
+    user-select: text;
+}
+
+pre span.sky {
+    color: skyblue;
+}
+
+pre span.purple {
+    color: rgb(221, 51, 221);
+}
+
+pre span.orange {
+    color: orange;
+}
+
+pre span.red {
+    color: rgb(236, 82, 22);
+}
+
+pre span.violet {
+    color: rgb(194, 9, 240);
+}
+
+pre span.green {
+    color: lightgreen;
+}
+
 .menubar {
     background-color: #222222;
     height: 100vh;
@@ -35,7 +79,7 @@ body {
     position: relative;
     text-align: center;
     width: 500px;
-    margin: 100px auto;
+    margin: 100px;
 }
 
 h2 {
@@ -47,7 +91,7 @@ h2 {
 
 .folder {
     position: absolute;
-    left: 390px;
+    display: inline-block;
     height: 230px;
     width: 100px;
     padding: 10px;
@@ -94,6 +138,7 @@ button:hover {
 }
 
 .desktop-screen {
+    display: inline-block;
     position: relative;
     width: 350px;
     height: 230px;
