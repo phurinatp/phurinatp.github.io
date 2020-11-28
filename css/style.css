@@ -145,6 +145,8 @@ button:hover {
     background-color: #34495e;
     margin: 5px;
     z-index: 0;
+    background-image: url('../assets/images/wallpaper.webp');
+    background-size: cover;
 }
 
 .another-program {
