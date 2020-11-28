@@ -92,10 +92,17 @@ function updateInstruction() {
             mobileStep2.style.display = 'none';
             break;
         case 2:
-            stepInstruction.innerHTML = `
-                Get the position of the mobile window (x, y, w, h) and save it to use later.
-                <p class="library">( Use active-win )</p>
-            `;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                    Get the position of the mobile window (x, y, w, h) and save it to use later.
+                    <p class="library">( Use active-win )</p>
+                `;
+            } else {
+                stepInstruction.innerHTML = `
+                    หาค่าตำแหน่งของโปรแกรมมือถือ (x, y, w, h) จากนั้น save ไว้เพื่อใช้ในภายหลัง.
+                    <p class="library">( ใช้ active-win )</p>
+                `;
+            }
             if (!isAnimateBorderActive(mobileDevices[0])) {
                 mobileDevices[0].classList.toggle("animate-border");
             }
@@ -108,10 +115,17 @@ function updateInstruction() {
             }
             break;
         case 3:
-            stepInstruction.innerHTML = `
-                Capture the mobile screen and save it. For example <span style="color: lightcoral;">capture.png</span>
-                <p class="library">( Use Robot.js and Jimp )</p>
-            `;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                    Capture the mobile screen and save it. For example <span style="color: lightcoral;">capture.png</span>
+                    <p class="library">( Use Robot.js and Jimp )</p>
+                `;
+            } else {
+                stepInstruction.innerHTML = `
+                    บันทึกภาพหน้าจอโปรแกรมมือถือและ save รูป เช่น <span style="color: lightcoral;">capture.png</span>
+                    <p class="library">( ใช้ Robot.js กับ Jimp )</p>
+                `;
+            }
             if (isAnimateBorderActive(mobileDevices[0])) {
                 mobileDevices[0].classList.toggle("animate-border");
             }
@@ -129,14 +143,25 @@ function updateInstruction() {
             mobileStep2.style.display = 'none';
             break;
         case 4:
-            stepInstruction.innerHTML = `
-                Find the position of the sub-image in the big image that you was capture in the previous step.
-                <br/><br/>
-                big image: <span style="color: lightcoral;">capture.png</span>
-                <br/>
-                sub-image: <span style="color: #f6e58d;">icon.png</span>
-                <p class="library">( Use opencv4node.js )</p>
-                `;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                    Find the position of the sub-image in the big image that you was capture in the previous step.
+                    <br/><br/>
+                    big image: <span style="color: lightcoral;">capture.png</span>
+                    <br/>
+                    sub-image: <span style="color: #f6e58d;">icon.png</span>
+                    <p class="library">( Use opencv4node.js )</p>
+                    `;
+            } else {
+                stepInstruction.innerHTML = `
+                    หาตำแหน่งของรูปเล็กในรูปใหญ่ (รูปที่พึ่งบันทึกภาพไว้จากขั้นตอนก่อนหน้า)
+                    <br/><br/>
+                    รูปใหญ่: <span style="color: lightcoral;">capture.png</span>
+                    <br/>
+                    รูปเล็ก: <span style="color: #f6e58d;">icon.png</span>
+                    <p class="library">( ใช้ opencv4node.js )</p>
+                    `;
+            }
             mobileStep3.style.display = 'none';
             mobileStep4.style.display = 'block';
             mobileStep2.style.display = 'none';
@@ -148,8 +173,13 @@ function updateInstruction() {
             }
             break;
         case 5:
-            stepInstruction.innerHTML = `
-            Calculate the final coordinate for the mouse cursor to click`;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                Calculate the final coordinate for the mouse cursor to click`;
+            } else {
+                stepInstruction.innerHTML = `
+                คำนวณหาค่าตำแหน่งสุดท้าย เพื่อที่จะให้เมาส์คลิก`;
+            }
             mobileDevices[0].style.border = '1px solid red';
             mobileStep2.style.display = 'block';
             mobileStep3.style.display = 'none';
@@ -158,10 +188,17 @@ function updateInstruction() {
             initilizeTheMouseCursor();
             break;
         case 6:
-            stepInstruction.innerHTML = `
-                Click
-                <p class="library">( Use robot.js )</p>
-            `;
+            if (lang === 'eng') {
+                stepInstruction.innerHTML = `
+                    Click
+                    <p class="library">( Use robot.js )</p>
+                `;
+            } else {
+                stepInstruction.innerHTML = `
+                    คลิกตามตำแหน่งที่ได้คำนวณไว้
+                    <p class="library">( ใช้ robot.js )</p>
+                `;
+            }
             mobileStep2.style.display = 'none';
             mobileStep4.style.display = 'none';
             mobileStep3.style.display = 'none';
