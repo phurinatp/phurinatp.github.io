@@ -251,11 +251,11 @@ for (let i = 0; i < content.length; i++) {
     });
 }
 
-function hideAllCodeBlock () {
+function hideAllCodeBlock() {
     content1CodeSteps.forEach(item => item.style.display = 'none');
 }
 
-function displayCodeBlock (stepNumber) {
+function displayCodeBlock(stepNumber) {
     if (stepNumber === 0) {
         return;
     }
@@ -270,7 +270,7 @@ function displayCodeBlock (stepNumber) {
 languageSelect.addEventListener('change', (e) => {
     console.log('You selected: ', e.target.value);
     let l = e.target.value;
-    
+
     if (l === 'eng') {
         window.location.href = './index.html';
     } else if (l === 'thai') {
