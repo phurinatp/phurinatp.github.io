@@ -1,235 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Control on a Computer</title>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TDH8C62');</script>
-        <meta id="linkimage" property="og:image" content="https://www.efinancethai.com/news/picture/2021/1/16/T/5628572.jpg">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta id="metaurl" property="og:url" content="https://phurinatp.github.io/index-th.html">
-        <meta id="metatitleshare" property="og:title" content="โกลด์แมน แซคส์ เล็งเปิดบริการ `crypto custody`">
-        <meta id="metadescshare" property="og:description" content="สำนักข่าวอีไฟแนนซ์ไทย- -16 ม.ค. 64 14:11 น.  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;โกลด์แมน แซคส์&quot; แย้มอาจจะเข้าสู่ตลาดคริปโทฯ ในเร็วๆ นี้ ล่าสุดกำลังสำรวจรายละเอียดธุรกิจ &quot;crypto custod...">
-        <meta property="og:site_name" content="phurinatp.github.io">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- End Google Tag Manager -->
-</head>
-
-<body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDH8C62" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <header>
-        <img src="./assets/images/robot.png" alt="" width="32px">
-        <h4>Mobile Control on a Computer</h4>
-        <div class="lang-div">
-            <label for="language">Language: </label>
-            <select name="language" id="language">
-                <option value="eng">English</option>
-                <option value="thai">Thai</option>
-            </select>
-        </div>
-    </header>
-    <div class="menubar">
-        <h3>Content</h3>
-        <h5>Introduction</h5>
-        <a class="content">- What is a mobile control</a>
-        <a class="content">- How to setup</a>
-        <h5>How to Control a Mobile</h5>
-        <a class="content active">- Algorithm to click the icon on a mobile</a>
-        <a class="content">- Algorithm to read the text on a mobile</a>
-    </div>
-    <div class="container">
-        <div id="content-1">
-            <h2>Algorithm to click the icon on a mobile</h2>
-            <div class="desktop-screen">
-                <div class="mouse-cursor">
-                    <img src="./assets/images/cursor.png" alt="">
-                </div>
-                <div class="mobile-device">
-                    <div id="mobile-step-2">
-                        <p class="mobile-xy">(x, y)</p>
-                        <p class="mobile-h">height</p>
-                        <p class="mobile-w">width</p>
-                    </div>
-                    <div id="mobile-step-3">
-                        <img src="./assets/images/dot.png" alt="">
-                    </div>
-                    <div class="application-container">
-                        <div class="app" id="app">
-                            <div id="mobile-step-4">
-                                <p class="app-xy">(x, y)</p>
-                                <p class="app-h">h</p>
-                                <p class="app-w">w</p>
-                            </div>
-                        </div>
-                        <div class="app"></div>
-                        <div class="app"></div>
-                    </div>
-                    <h5 id="mobile-text">mobile</h5>
-                </div>
-                <div class="another-program">
-                    <h5>another program</h5>
-                </div>
-                <div class="desktop-taskbar"></div>
-            </div>
-            <div class="folder">
-                <img src="./assets/images/folder.png" width="30px">
-                <span>assets</span>
-                <p>- icon.png</p>
-            </div>
-
-            <div class="instruction">
-                <h3 id="step"></h3>
-                <h5 id="step-instruction"></h5>
-            </div>
-
-            <button id="prevBtn">Prev</button>
-            <button id="nextBtn">Next</button>
-        </div>
-
-        <div id="content-2"></div>
-    </div>
-
-    <div class="code-container">
-
-        <div id="content-1-code-step-1">
-            <h4>Code example</h4>
-<pre>
-
-<span class="orange">const</span> { <span class="sky">windowManager</span> } = <span class="orange">require</span>(<span class="green">'node-window-manager'</span>);
-
-<span class="purple">function</span> bringWindowToTop (<span class="sky">windowName</span>) {
-    <span class="orange">let</span> <span class="sky">window</span> = <span class="sky">windowManager</span>.getWindows().find(<span class="sky">w</span> => <span class="sky">w</span>.getTitle() === <span class="sky">windowName</span>);
-
-    <span class="orange">if</span> (<span class="sky">window</span>) {
-        <span class="sky">window</span>.bringToTop();
-    }
-}
-
-</pre>
-
-        </div>
-
-        <div id="content-1-code-step-2">
-            <h4>Code example</h4>
-<pre>
-
-<span class="orange">const</span> <span class="sky">activeWin</span> = <span class="orange">require</span>(<span class="green">'active-win'</span>);
-
-<span class="orange">async</span> <span class="purple">function</span> getPositionOfActiveWindow () {
-    <span class="orange">let</span> <span class="sky">data</span> = <span class="orange">await</span> activeWin();
-    <span class="orange">return</span> <span class="sky">data</span>.bounds;
-}
-
-</pre>
-
-        </div>
-
-        <div id="content-1-code-step-3">
-            <h4>Code example</h4>
-<pre>
-
-<span class="orange">const</span> <span class="sky">robot</span> = <span class="orange">require</span>(<span class="green">'robotjs'</span>);
-<span class="orange">const</span> <span class="sky">Jimp</span> = <span class="orange">require</span>(<span class="green">'jimp'</span>);
-
-<span class="orange">async</span> <span class="purple">function</span> captureScreenByPosition (<span class="sky">outputFile</span>, <span class="sky">position</span>) {
-    <span class="orange">const</span> { <span class="sky">x</span>, <span class="sky">y</span>, <span class="sky">width</span>, <span class="sky">height</span> } = <span class="sky">position</span>;
-    <span class="orange">const</span> <span class="sky">image</span> = <span class="sky">robot</span>.screen.capture(<span class="sky">x</span>, <span class="sky">y</span>, <span class="sky">width</span>, <span class="sky">height</span>);
-    <span class="orange">for</span> (<span class="orange">let</span> <span class="sky">i</span> = <span class="red">0</span>; <span class="sky">i</span> < <span class="sky">image</span>.image.length; i++) {
-        <span class="orange">if</span> (<span class="sky">i</span> % <span class="red">4</span> === <span class="red">0</span>) {
-        [<span class="sky">image</span>.image[<span class="sky">i</span>], <span class="sky">image</span>.image[<span class="sky">i</span> + <span class="red">2</span>]] = [
-            <span class="sky">image</span>.image[<span class="sky">i</span> + <span class="red">2</span>],
-            <span class="sky">image</span>.image[<span class="sky">i</span>],
-        ];
-        }
-    }
-    <span class="orange">const</span> <span class="sky">jimg</span> = <span class="orange">new</span> Jimp(<span class="sky">width</span>, <span class="sky">height</span>);
-    <span class="sky">jimg</span>.bitmap.data = <span class="sky">image</span>.image;
-
-    <span class="violet">// save file</span>
-    <span class="sky">jimg</span>.write(<span class="sky">outputFile</span>);
-}
-
-</pre>
-
-        </div>
-
-        <div id="content-1-code-step-4">
-            <h4>Code example</h4>
-<pre>
-
-<span class="orange">const</span> <span class="sky">cv</span> = <span class="orange">require</span>(<span class="green">'opencv4nodejs'</span>);
-
-<span class="orange">async</span> <span class="purple">function</span> findSubImgPositionInBigImg (<span class="sky">bigImg</span>, <span class="sky">subImg</span>) {
-    <span class="orange">const</span> <span class="sky">threshold</span> = <span class="red">0.8</span>;
-    <span class="orange">const</span> <span class="sky">bigImgMat</span> = <span class="orange">await</span> <span class="sky">cv</span>.imreadAsync(<span class="sky">bigImg</span>);
-    <span class="orange">const</span> <span class="sky">subImgMat</span> = <span class="orange">await</span> <span class="sky">cv</span>.imreadAsync(<span class="sky">subImg</span>);
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">    
     
-    <span class="orange">const</span> <span class="sky">matched</span> = <span class="sky">bigImgMat</span>.matchTemplate(<span class="sky">subImgMat</span>, <span class="sky">cv.TM_CCOEFF_NORMED</span>);
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Efin Web Trade</title>
+    <script>
+      // default to dark if not exist in local storage
+      let isDark = localStorage.getItem("isDark");
+      if (isDark === null) {
+        isDark = "true";
+        localStorage.setItem("isDark", isDark);
+      }
+
+      // set theme
+      if (isDark === "true") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <script async type="module" crossorigin src="/assets/index.js"></script>
+    <link rel="preload" href="/assets/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+
+  <body class="dark:bg-darkMode">
+    <div id="app"></div>
     
-    <span class="orange">const</span> <span class="sky">minMax</span> = <span class="sky">matched</span>.minMaxLoc();
-    <span class="orange">if</span> (<span class="sky">minMax</span>.maxVal >= <span class="sky">threshold</span>) {
-        <span class="orange">const</span> {
-            <span class="sky">maxLoc</span>: { <span class="sky">x</span>, <span class="sky">y</span> },
-        } = <span class="sky">minMax</span>;
-    
-        <span class="sky">bigImgMat</span>.drawRectangle(
-            <span class="orange">new</span>  cv.Rect(<span class="sky">x</span>, <span class="sky">y</span>, <span class="sky">subImgMat</span>.cols, <span class="sky">subImgMat</span>.rows),
-            <span class="orange">new</span>  cv.Vec3(<span class="red">0</span>, <span class="red">255</span>, <span class="red">0</span>),
-            <span class="red">2</span>,
-            <span class="sky">cv.LINE_8</span>,
-        );
-    
-        <span class="violet">// save file for presention (optional)</span>
-        <span class="sky">cv</span>.imwrite(`${<span class="sky">__dirname</span>}/result.png`, <span class="sky">bigImgMat</span>);
-
-        <span class="sky">cv</span>.waitKey();
-
-        <span class="orange">return</span> {
-            x: Number(<span class="sky">x</span>),
-            y: Number(<span class="sky">y</span>),
-            w: Number(<span class="sky">subImgMat</span>.cols),
-            h: Number(<span class="sky">subImgMat</span>.rows),
-        };
-    }
-    <span class="orange">return</span>;
-}
-
-</pre>
-        </div>
-
-        <div id="content-1-code-step-5">
-        </div>
-
-        <div id="content-1-code-step-6">
-            <h4>Code example</h4>
-<pre>
-
-<span class="orange">const</span> <span class="sky">robot</span> = <span class="orange">require</span>(<span class="green">'robotjs'</span>);    
-
-<span class="purple">function</span> click (<span class="sky">x</span>, <span class="sky">y</span>) {
-    <span class="sky">robot</span>.moveMouse(<span class="sky">x</span>, <span class="sky">y</span>);
-    <span class="sky">robot</span>.mouseClick();
-}
-
-</pre>
-
-        </div>
-
-    </div>
-
-    <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
